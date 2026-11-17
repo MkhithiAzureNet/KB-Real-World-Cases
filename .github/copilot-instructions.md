@@ -25,86 +25,94 @@ KB-Real-World-Cases/
 │
 ├── 01-Azure-Cloud/
 │   ├── README.md
-│   ├── Entra-ID/
-│   ├── Virtual-Machines/
-│   ├── Networking/
-│   ├── Storage/
-│   ├── Governance/
-│   ├── Security/
-│   └── Troubleshooting/
+│   ├── 01-Entra-ID/
+│   ├── 02-Virtual-Machines/
+│   ├── 03-Networking/
+│   ├── 04-Storage/
+│   ├── 05-Governance/
+│   ├── 06-Security/
+│   └── 07-Troubleshooting/
 │
 ├── 02-DevOps/
 │   ├── README.md
-│   ├── Linux/
-│   ├── Git-GitHub/
-│   ├── Docker/
-│   ├── Kubernetes/
-│   ├── Terraform/
-│   ├── Bicep/
-│   ├── CI-CD/
-│   └── Troubleshooting/
+│   ├── 01-Linux/
+│   ├── 02-Git-GitHub/
+│   ├── 03-Docker/
+│   ├── 04-Kubernetes/
+│   ├── 05-Terraform/
+│   ├── 06-Bicep/
+│   ├── 07-CI-CD/
+│   └── 08-Troubleshooting/
 │
 ├── 03-Networking/
 │   ├── README.md
-│   ├── MikroTik/
-│   ├── Switching/
-│   ├── VLANs/
-│   ├── Routing/
-│   ├── DHCP/
-│   └── Troubleshooting/
+│   ├── 01-MikroTik/
+│   ├── 02-Switching/
+│   ├── 03-VLANs/
+│   ├── 04-Routing/
+│   ├── 05-DHCP/
+│   └── 06-Troubleshooting/
 │
 ├── 04-Active-Directory/
 │   ├── README.md
-│   ├── User-Management/
-│   ├── Group-Policy/
-│   ├── Authentication/
-│   ├── DNS/
-│   └── Troubleshooting/
+│   ├── 01-User-Management/
+│   ├── 02-Group-Policy/
+│   ├── 03-Authentication/
+│   ├── 04-DNS/
+│   └── 05-Troubleshooting/
 │
 ├── 05-Microsoft-365/
 │   ├── README.md
-│   ├── Exchange/
-│   ├── SharePoint/
-│   ├── Intune/
-│   └── Troubleshooting/
+│   ├── 01-Exchange/
+│   ├── 02-SharePoint/
+│   ├── 03-Intune/
+│   └── 04-Troubleshooting/
 │
 ├── 06-Hardware/
 │   ├── README.md
-│   ├── Printers/
-│   ├── Workstations/
-│   ├── Peripherals/
-│   └── Troubleshooting/
+│   ├── 01-Printers/
+│   ├── 02-Workstations/
+│   ├── 03-Peripherals/
+│   └── 04-Troubleshooting/
 │
 ├── 07-Monitoring-Observability/
 │   ├── README.md
-│   ├── Zabbix/
-│   ├── Grafana/
-│   ├── Prometheus/
-│   └── Troubleshooting/
+│   ├── 01-Zabbix/
+│   ├── 02-Grafana/
+│   ├── 03-Prometheus/
+│   └── 04-Troubleshooting/
 │
 ├── 08-Scripting-Automation/
 │   ├── README.md
-│   ├── PowerShell/
-│   ├── Bash/
-│   ├── Python/
-│   └── Automation-Projects/
+│   ├── 01-PowerShell/
+│   ├── 02-Bash/
+│   ├── 03-Python/
+│   └── 04-Automation-Projects/
 │
 ├── 09-Cybersecurity/
 │   ├── README.md
-│   ├── Governance-and-Compliance/
-│   ├── Identity-and-Access/
-│   ├── Endpoint-Security/
-│   ├── Network-Security/
-│   ├── Vulnerability-Management/
-│   ├── Incident-Response/
-│   ├── Security-Tools/
-│   └── Troubleshooting/
+│   ├── 01-Governance-and-Compliance/
+│   ├── 02-Identity-and-Access/
+│   ├── 03-Endpoint-Security/
+│   ├── 04-Network-Security/
+│   ├── 05-Vulnerability-Management/
+│   ├── 06-Incident-Response/
+│   ├── 07-Security-Tools/
+│   └── 08-Troubleshooting/
 │
-└── 10-General-IT/
+├── 10-General-IT/
     ├── README.md
-    ├── Email/
-    ├── Applications/
-    └── Troubleshooting/
+    ├── 01-Email/
+    ├── 02-Applications/
+    └── 03-Troubleshooting/
+
+└── 11-VoIP-Telephony/
+    ├── README.md
+    ├── 01-Administration/
+    ├── 02-Call-Management/
+    ├── 03-Infrastructure/
+    ├── 04-Endpoints/
+    └── 05-Troubleshooting/
 
 Do not create new top-level folders unless explicitly requested.
 

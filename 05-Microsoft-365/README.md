@@ -2,4 +2,4 @@
 
 Documentation for Microsoft 365 services, administration, configuration, and troubleshooting.
 
-Topics: [Exchange](Exchange/), [SharePoint](SharePoint/), [Intune](Intune/), [Troubleshooting](Troubleshooting/).
+Topics: [Exchange](01-Exchange/), [SharePoint](02-SharePoint/), [Intune](03-Intune/), [Troubleshooting](04-Troubleshooting/).

@@ -2,4 +2,4 @@
 
 Documentation for network design, configuration, administration, and troubleshooting.
 
-Topics: [MikroTik](MikroTik/), [Switching](Switching/), [VLANs](VLANs/), [Routing](Routing/), [DHCP](DHCP/), [Troubleshooting](Troubleshooting/).
+Topics: [MikroTik](01-MikroTik/), [Switching](02-Switching/), [VLANs](03-VLANs/), [Routing](04-Routing/), [DHCP](05-DHCP/), [Troubleshooting](06-Troubleshooting/).

@@ -2,4 +2,4 @@
 
 Documentation for Azure cloud services, identity, infrastructure, governance, and operations.
 
-Topics: [Entra ID](Entra-ID/), [Virtual Machines](Virtual-Machines/), [Networking](Networking/), [Storage](Storage/), [Governance](Governance/), [Security](Security/), [Troubleshooting](Troubleshooting/).
+Topics: [Entra ID](01-Entra-ID/), [Virtual Machines](02-Virtual-Machines/), [Networking](03-Networking/), [Storage](04-Storage/), [Governance](05-Governance/), [Security](06-Security/), [Troubleshooting](07-Troubleshooting/).
