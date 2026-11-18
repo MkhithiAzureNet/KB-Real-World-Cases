@@ -126,7 +126,7 @@ try {
     Add-Report "Created:       $($item.CreationTime)"
     Add-Report "Modified:      $($item.LastWriteTime)"
     try {
-        $zone = Get-Item -LiteralPath $item.FullName -Stream Zone.Identifier -ErrorAction Stop
+        Get-Item -LiteralPath $item.FullName -Stream Zone.Identifier -ErrorAction Stop | Out-Null
         $zoneText = Get-Content -LiteralPath $item.FullName -Stream Zone.Identifier -ErrorAction Stop
         Add-Report "Mark-of-the-Web stream:"
         $zoneText | ForEach-Object { Add-Report "  $_" }
