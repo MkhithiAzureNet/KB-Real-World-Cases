@@ -393,6 +393,6 @@ Key lessons:
 
 ---
 
-**Document Owner:** IT / Cybersecurity  
+**Document Owner:** Nhlanhla 
 **Knowledge Base Reference:** SEC-001  
 **Category:** Endpoint Security
