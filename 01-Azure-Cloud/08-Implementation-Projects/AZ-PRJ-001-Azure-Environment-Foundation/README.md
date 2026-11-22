@@ -23,7 +23,7 @@ The project covers the foundation and workload steps completed across Labs 01–
 | Milestone | Focus | Documentation State |
 |---|---|---|
 | Email 001 / Lab 01 | Initial production and development network foundation, subnets, and VNet peering | Documented; request evidence recovered |
-| Email 002 / Lab 01.2 | Database-subnet Network Security Groups and SQL access policy | Request evidence recovered; implementation case pending |
+| Email 002 / Lab 01.2 | Database-subnet Network Security Groups and SQL access policy | Documented from request, portal, and CLI evidence |
 | Lab 01.3 | Azure virtual machines, network interfaces, and private addressing | Pending detailed implementation case |
 | Lab 01.4 | Cloud-init, outbound connectivity, and NAT Gateway | Pending detailed implementation case |
 | Lab 01.5 | SQL Server 2022, managed identity, Key Vault, and SQL validation | Pending detailed implementation case |
@@ -58,7 +58,7 @@ Architecture details, resource names, IP ranges, and deviations will be recorded
 Milestone documents:
 
 1. [AZ-001-Network-Infrastructure.md](02-Implementation/AZ-001-Network-Infrastructure.md) — Email 001 / Lab 01
-2. `AZ-002-Network-Security-Groups.md` — Lab 01.2
+2. [AZ-002-Network-Security-Groups.md](02-Implementation/AZ-002-Network-Security-Groups.md) — Lab 01.2
 3. `AZ-003-Virtual-Machine-Deployment.md` — Lab 01.3
 4. `AZ-004-Cloud-Init-and-Outbound-Connectivity.md` — Lab 01.4
 5. `AZ-005-SQL-Server-and-Key-Vault-Integration.md` — Lab 01.5
@@ -112,7 +112,7 @@ NAT Gateway and public IP resources can create ongoing charges. The environment 
 ## 10. Next Documentation Steps
 
 1. Add supporting validation and acceptance evidence for Email 001 / Lab 01.
-2. Create the four remaining milestone implementation documents in order, using the documented case format.
+2. Create the three remaining milestone implementation documents in order, using the documented case format.
 3. Add redacted evidence and cross-link it from each milestone.
 4. Record material troubleshooting cases and final validation results.
 5. Document any later cost-optimisation change separately from the original implementation.
