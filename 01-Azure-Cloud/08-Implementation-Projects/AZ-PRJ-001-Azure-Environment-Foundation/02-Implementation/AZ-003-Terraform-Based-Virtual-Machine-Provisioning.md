@@ -208,131 +208,16 @@ The Terraform workflow was used to review and apply the infrastructure configura
 
 The deployment was then checked in the Azure portal. The VM inventory showed the four expected VM names, their operating systems, their selected sizes, and no public IP addresses assigned in the displayed inventory.
 
-```drawio
-<mxfile>
-  <diagram id="ZhUt0OlgMDiUUq_1P43H" name="Page-1">
-    <mxGraphModel dx="844" dy="1184" grid="1" gridSize="10" guides="1" tooltips="0" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="VZrEqStcxqN1RkUgOz8s-0" />
-        <mxCell id="VZrEqStcxqN1RkUgOz8s-1" parent="VZrEqStcxqN1RkUgOz8s-0" />
-        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TD\n    A[\&quot;Terraform configuration ready\&quot;] --&gt; B[\&quot;terraform init\&quot;]\n    B --&gt; C[\&quot;terraform validate\&quot;]\n    C --&gt; D[\&quot;terraform plan\&quot;]\n    D --&gt; E{\&quot;Plan matches intended changes?\&quot;}\n    E -- \&quot;No: revise configuration\&quot; --&gt; A\n    E -- \&quot;Yes: approve\&quot; --&gt; F[\&quot;terraform apply\&quot;]\n    F --&gt; G[\&quot;Verify deployment in Azure portal\&quot;]\n    G --&gt; H[\&quot;Confirm four VMs, OS, sizes, and no public IPs\&quot;]&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="RmYSTrkWlXRnJ2o81Js9-0">
-          <mxCell connectable="0" parent="VZrEqStcxqN1RkUgOz8s-1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
-            <mxGeometry as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="Terraform configuration ready" mermaidId="n:A" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Terraform configuration ready" id="VZrEqStcxqN1RkUgOz8s-2">
-          <mxCell parent="RmYSTrkWlXRnJ2o81Js9-0" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="54" width="276" x="77" y="10" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="terraform init" mermaidId="n:B" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="terraform init" id="VZrEqStcxqN1RkUgOz8s-3">
-          <mxCell parent="RmYSTrkWlXRnJ2o81Js9-0" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="54" width="159" x="27" y="114" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="terraform validate" mermaidId="n:C" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="terraform validate" id="VZrEqStcxqN1RkUgOz8s-4">
-          <mxCell parent="RmYSTrkWlXRnJ2o81Js9-0" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="54" width="193" x="10" y="218" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="terraform plan" mermaidId="n:D" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="terraform plan" id="VZrEqStcxqN1RkUgOz8s-5">
-          <mxCell parent="RmYSTrkWlXRnJ2o81Js9-0" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="54" width="166" x="24" y="322" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="Plan matches intended changes?" mermaidId="n:E" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Plan matches intended changes?" id="VZrEqStcxqN1RkUgOz8s-6">
-          <mxCell parent="RmYSTrkWlXRnJ2o81Js9-0" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="387" width="387" x="22" y="426" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="terraform apply" mermaidId="n:F" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="terraform apply" id="VZrEqStcxqN1RkUgOz8s-7">
-          <mxCell parent="RmYSTrkWlXRnJ2o81Js9-0" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="54" width="174" x="128" y="882" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="Verify deployment in Azure portal" mermaidId="n:G" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Verify deployment in Azure portal" id="VZrEqStcxqN1RkUgOz8s-8">
-          <mxCell parent="RmYSTrkWlXRnJ2o81Js9-0" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="54" width="302" x="64" y="986" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="Confirm four VMs, OS, sizes, and no public IPs" mermaidId="n:H" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Confirm four VMs, OS, sizes, and no public IPs" id="VZrEqStcxqN1RkUgOz8s-9">
-          <mxCell parent="RmYSTrkWlXRnJ2o81Js9-0" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
-            <mxGeometry height="54" width="389" x="21" y="1090" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="" mermaidId="e:A-&gt;B#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.3;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="VZrEqStcxqN1RkUgOz8s-10">
-          <mxCell edge="1" parent="RmYSTrkWlXRnJ2o81Js9-0" source="VZrEqStcxqN1RkUgOz8s-2" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.3;exitY=1;entryX=0.5;entryY=0;" target="VZrEqStcxqN1RkUgOz8s-3">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points">
-                <mxPoint x="107" y="89" />
-              </Array>
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="" mermaidId="e:B-&gt;C#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="VZrEqStcxqN1RkUgOz8s-11">
-          <mxCell edge="1" parent="RmYSTrkWlXRnJ2o81Js9-0" source="VZrEqStcxqN1RkUgOz8s-3" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="VZrEqStcxqN1RkUgOz8s-4">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="" mermaidId="e:C-&gt;D#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="VZrEqStcxqN1RkUgOz8s-12">
-          <mxCell edge="1" parent="RmYSTrkWlXRnJ2o81Js9-0" source="VZrEqStcxqN1RkUgOz8s-4" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="VZrEqStcxqN1RkUgOz8s-5">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="" mermaidId="e:D-&gt;E#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.25;entryY=0;" mermaidBaseValue="" id="VZrEqStcxqN1RkUgOz8s-13">
-          <mxCell edge="1" parent="RmYSTrkWlXRnJ2o81Js9-0" source="VZrEqStcxqN1RkUgOz8s-5" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.25;entryY=0;" target="VZrEqStcxqN1RkUgOz8s-6">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points">
-                <mxPoint x="107" y="401" />
-              </Array>
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="No: revise configuration" mermaidId="e:E-&gt;A#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.75;exitY=0;entryX=0.71;entryY=1;" mermaidBaseValue="No: revise configuration" id="VZrEqStcxqN1RkUgOz8s-14">
-          <mxCell edge="1" parent="RmYSTrkWlXRnJ2o81Js9-0" source="VZrEqStcxqN1RkUgOz8s-6" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.75;exitY=0;entryX=0.71;entryY=1;" target="VZrEqStcxqN1RkUgOz8s-2">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points">
-                <mxPoint x="324" y="401" />
-                <mxPoint x="324" y="349" />
-                <mxPoint x="324" y="297" />
-                <mxPoint x="324" y="245" />
-                <mxPoint x="324" y="193" />
-                <mxPoint x="324" y="141" />
-                <mxPoint x="324" y="89" />
-              </Array>
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="Yes: approve" mermaidId="e:E-&gt;F#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="Yes: approve" id="VZrEqStcxqN1RkUgOz8s-15">
-          <mxCell edge="1" parent="RmYSTrkWlXRnJ2o81Js9-0" source="VZrEqStcxqN1RkUgOz8s-6" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="VZrEqStcxqN1RkUgOz8s-7">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="" mermaidId="e:F-&gt;G#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="VZrEqStcxqN1RkUgOz8s-16">
-          <mxCell edge="1" parent="RmYSTrkWlXRnJ2o81Js9-0" source="VZrEqStcxqN1RkUgOz8s-7" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="VZrEqStcxqN1RkUgOz8s-8">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="" mermaidId="e:G-&gt;H#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="VZrEqStcxqN1RkUgOz8s-17">
-          <mxCell edge="1" parent="RmYSTrkWlXRnJ2o81Js9-0" source="VZrEqStcxqN1RkUgOz8s-8" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="VZrEqStcxqN1RkUgOz8s-9">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
-
+```mermaid
+flowchart TD
+    A["Terraform configuration ready"] --> B["terraform init"]
+    B --> C["terraform validate"]
+    C --> D["terraform plan"]
+    D --> E{"Plan matches intended changes?"}
+    E -->|No: revise configuration| A
+    E -->|Yes: approve| F["terraform apply"]
+    F --> G["Verify deployment in Azure portal"]
+    G --> H["Confirm four VMs, OS, sizes, and no public IPs"]
 ```
 
 ---
