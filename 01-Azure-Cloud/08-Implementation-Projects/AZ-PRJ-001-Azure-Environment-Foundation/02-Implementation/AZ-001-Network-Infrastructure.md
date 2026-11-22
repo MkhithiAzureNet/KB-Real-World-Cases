@@ -7,7 +7,7 @@
 **Region:** South Africa North  
 **Resource Group:** RG-CloudEng-01  
 **Implementation Approach:** Terraform with Azure Portal and Azure CLI validation  
-**Status:** Implemented Scope Documented — Original Request Evidence Pending
+**Status:** Implemented Scope Documented — Request Details Recovered
 
 ---
 
@@ -15,13 +15,13 @@
 
 This milestone established the initial Azure network foundation for separate production and development environments. The implementation created segmented network contexts for application and database workloads and connected the two virtual networks through VNet peering.
 
-This case records the observed implementation scope. The original Email 001 wording, date, and acceptance criteria are not available in the repository and are deliberately not inferred. See the linked requirement record for the source-evidence boundary.
+This case records the observed implementation scope. The recovered Email 001 wording and requirements are preserved in the linked request record. The screenshot does not show a request date or acceptance criteria, and neither is inferred.
 
 ## 2. Business Request and Expected Outcome
 
 ### Request Evidence Status
 
-Email 001 initiated the work, but its original content is pending. This document must not be read as a verbatim CTO instruction.
+Email 001 from the CTO requested an initial Azure network infrastructure for production and development workloads. Its recovered requirements were separate production and development virtual networks, separate IP address spaces, application and database subnets, VNet peering, and deployment in South Africa North. See the linked request record for the preserved source evidence.
 
 ### Implemented Outcome
 
@@ -126,11 +126,10 @@ If a material Lab 01 incident is supplied, document it either in this section or
 
 To complete this milestone, add or link:
 
-1. The original, redacted Email 001 or authorised request record.
-2. Approved VNet address spaces and application-subnet names.
-3. Terraform plan or deployment evidence, with sensitive values removed.
-4. Screenshot or CLI evidence for each VNet, subnet, and peering.
-5. A controlled connectivity test where applicable.
+1. Approved VNet address spaces and application-subnet names.
+2. Terraform plan or deployment evidence, with sensitive values removed.
+3. Screenshot or CLI evidence for each VNet, subnet, and peering.
+4. A controlled connectivity test where applicable.
 
 ## 10. Related Records
 

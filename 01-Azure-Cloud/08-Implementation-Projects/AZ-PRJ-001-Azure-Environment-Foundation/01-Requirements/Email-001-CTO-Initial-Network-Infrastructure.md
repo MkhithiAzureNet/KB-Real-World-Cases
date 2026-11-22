@@ -3,46 +3,47 @@
 **Project:** [AZ-PRJ-001 — Azure Environment Foundation](../README.md)  
 **Request Reference:** Email 001  
 **Request Owner:** CTO  
-**Status:** Source Evidence Pending  
+**Status:** Request Details Recovered — Date and Acceptance Evidence Pending  
 **Related Milestone:** [AZ-001 — Network Infrastructure](../02-Implementation/AZ-001-Network-Infrastructure.md)
 
 ---
 
-## 1. Source-Evidence Status
+## 1. Source Evidence
 
-The original Email 001 has not yet been added to the repository. Its wording, sender metadata, date, explicit requirements, and acceptance criteria are therefore not quoted or reconstructed in this record.
+![Recovered Email 001 from the CTO](../images/email-001-initial-network-infrastructure.png)
 
-This document preserves the request reference and traceability point for the first Azure milestone. It must be completed from the original email or another authorised source record before it is treated as a complete requirements document.
+The supplied screenshot identifies the sender as **CTO** and preserves the request wording and requirements below. It does not show a request date or formal acceptance criteria; neither is inferred.
 
-## 2. Available Context
+## 2. Original Request
 
-The implementation history identifies Email 001 / Lab 01 as the request that initiated the Azure network foundation. The resulting scope recorded in [AZ-001](../02-Implementation/AZ-001-Network-Infrastructure.md) is separate production and development network contexts, segmented application and database subnets, and VNet peering.
+> We are preparing our Azure environment for the deployment of our production and development workloads. Please establish the initial network infrastructure.
 
-This is implementation context, not a substitute for the original CTO instruction.
+## 3. Recovered Requirements
 
-## 3. Requirements Pending Confirmation
+1. Create a production virtual network.
+2. Create a development virtual network.
+3. Ensure that the networks use separate IP address spaces.
+4. Create appropriate subnets for application and database workloads.
+5. Establish communication between the two virtual networks using VNet Peering.
+6. Ensure that the networks are deployed in South Africa North.
 
-The following must be verified against the original request evidence:
+## 4. Traceability to Implementation
 
-- Business objective and intended workloads.
-- Required production and development separation.
-- Approved address spaces and subnet allocation.
-- Required connectivity and isolation boundaries.
-- Required region, resource group, naming, and tagging standards.
-- Security, governance, cost, and operational acceptance criteria.
+| Recovered Requirement | Implementation Record | Evidence Status |
+|---|---|---|
+| Production virtual network | [AZ-001 — Network Infrastructure](../02-Implementation/AZ-001-Network-Infrastructure.md) | Implementation scope documented |
+| Development virtual network | [AZ-001 — Network Infrastructure](../02-Implementation/AZ-001-Network-Infrastructure.md) | Implementation scope documented |
+| Separate IP address spaces | [AZ-001 — Network Infrastructure](../02-Implementation/AZ-001-Network-Infrastructure.md) | Subnet ranges documented; VNet address spaces pending |
+| Application and database subnets | [AZ-001 — Network Infrastructure](../02-Implementation/AZ-001-Network-Infrastructure.md) | Implementation scope documented |
+| VNet peering | [AZ-001 — Network Infrastructure](../02-Implementation/AZ-001-Network-Infrastructure.md) | Connected and synchronised state recorded; endpoint testing pending |
+| South Africa North deployment | [AZ-001 — Network Infrastructure](../02-Implementation/AZ-001-Network-Infrastructure.md) | Documented; deployment evidence pending |
 
-## 4. Completion Evidence Required
+## 5. Outstanding Evidence
 
 Attach or reference the following when available:
 
-- The original email in a redacted, access-controlled source location.
 - Any approved design or change record.
 - Acceptance criteria or sign-off.
+- Resource deployment or Terraform evidence, with sensitive values removed.
 - Relevant date and timeline information.
-
-## 5. Traceability
-
-| Request Element | Implementation Record | Status |
-|---|---|---|
-| Initial Azure network foundation | [AZ-001 — Network Infrastructure](../02-Implementation/AZ-001-Network-Infrastructure.md) | Implemented scope documented; request wording pending |
 

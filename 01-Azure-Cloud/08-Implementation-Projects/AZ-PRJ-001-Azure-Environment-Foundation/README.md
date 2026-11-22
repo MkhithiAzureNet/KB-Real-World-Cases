@@ -6,7 +6,7 @@
 **Implementation Approach:** Terraform with Azure Portal and Azure CLI validation  
 **Status:** Documentation in Progress  
 **Project Period:** Labs 01–01.5  
-**Request Owner:** CTO — source evidence pending
+**Request Owners:** CTO and Security Operations — request evidence recovered
 
 ---
 
@@ -14,7 +14,7 @@
 
 AZ-PRJ-001 is the parent implementation record for the Azure environment foundation built in response to CTO-led requests. Rather than treating the work as isolated labs, this project preserves the engineering story: the business request, design and implementation decisions, validation evidence, issues encountered, and lessons learned.
 
-The original **Email 001** initiated the environment work. Its original wording and date have not yet been added to this repository and must be attached as source evidence before a detailed requirement record is written. Subsequent CTO emails have not been supplied and are intentionally not reconstructed here.
+The recovered **Email 001** from the CTO initiated the environment work. A recovered **Email 002** from Security Operations introduced the network-access restrictions for the next milestone. The request wording and requirements are preserved in the request-evidence records; neither screenshot includes a date, so no date is inferred.
 
 ## 2. Scope and Milestones
 
@@ -22,8 +22,8 @@ The project covers the foundation and workload steps completed across Labs 01–
 
 | Milestone | Focus | Documentation State |
 |---|---|---|
-| Email 001 / Lab 01 | Initial production and development network foundation, subnets, and VNet peering | Documented; original request evidence pending |
-| Lab 01.2 | Database-subnet Network Security Groups and SQL access policy | Pending detailed implementation case |
+| Email 001 / Lab 01 | Initial production and development network foundation, subnets, and VNet peering | Documented; request evidence recovered |
+| Email 002 / Lab 01.2 | Database-subnet Network Security Groups and SQL access policy | Request evidence recovered; implementation case pending |
 | Lab 01.3 | Azure virtual machines, network interfaces, and private addressing | Pending detailed implementation case |
 | Lab 01.4 | Cloud-init, outbound connectivity, and NAT Gateway | Pending detailed implementation case |
 | Lab 01.5 | SQL Server 2022, managed identity, Key Vault, and SQL validation | Pending detailed implementation case |
@@ -74,7 +74,7 @@ Each milestone must distinguish between configured, observed, and tested states.
 | Validation evidence | CLI output, connection tests, SQL query output | Confirms what was actually tested |
 | Issue evidence | Error output, investigation notes, remediation steps | Supports the troubleshooting and lessons-learned record |
 
-**Source-evidence gap:** Attach Email 001 and any later CTO requests before documenting their exact instructions, dates, or acceptance criteria. Do not infer missing content from the lab names.
+**Source-evidence boundary:** Email 001 and Email 002 are preserved as supplied screenshots. The screenshots do not provide request dates, detailed acceptance evidence, or later requests; do not infer those details from the lab names.
 
 ## 6. Challenges and Lessons Learned to Capture
 
@@ -111,8 +111,8 @@ NAT Gateway and public IP resources can create ongoing charges. The environment 
 
 ## 10. Next Documentation Steps
 
-1. Attach the original Email 001 as source evidence and complete its requirement record.
-2. Create the remaining four milestone implementation documents in order, using the documented case format.
+1. Add supporting validation and acceptance evidence for Email 001 / Lab 01.
+2. Create the four remaining milestone implementation documents in order, using the documented case format.
 3. Add redacted evidence and cross-link it from each milestone.
 4. Record material troubleshooting cases and final validation results.
 5. Document any later cost-optimisation change separately from the original implementation.
