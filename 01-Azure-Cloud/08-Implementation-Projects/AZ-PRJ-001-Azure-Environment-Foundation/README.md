@@ -1,11 +1,28 @@
 # AZ-PRJ-001 - Azure Environment Foundation
 
+## Executive Summary
+
+I translated infrastructure and security requirements into a working Azure foundation for production and development workloads. I combined network design, Terraform provisioning, Linux automation, outbound connectivity troubleshooting, and secure database operations.
+
+### Delivery Highlights
+
+- Designed separate production and development VNets with non-overlapping address spaces, workload subnets, and bidirectional peering.
+- Configured database-subnet Network Security Groups (NSGs) and scoped SQL access rules.
+- Provisioned four Ubuntu Linux virtual machines across the two environments using Terraform.
+- Diagnosed package download failures, distinguished DNS resolution from outbound connectivity, and deployed a NAT Gateway to enable egress.
+- Installed SQL Server 2022 Developer Edition on Ubuntu and verified the service and a local authenticated SQLCMD query.
+- Integrated a system-assigned managed identity, Azure RBAC, and Key Vault so the VM could retrieve the SQL administrator secret at runtime without embedding or printing its value.
+
+**Technologies:** Microsoft Azure, Terraform, Azure CLI, Ubuntu Server 22.04, cloud-init, NAT Gateway, NSGs, Azure RBAC, Managed Identity, Key Vault, SQL Server 2022, SQLCMD.
+
+**Engineering strengths demonstrated:** Translating requirements into infrastructure; Infrastructure as Code; cloud networking and security; Linux automation and troubleshooting; secure secret handling; and evidence-based validation.
+
+**Scope:** This is a hands-on engineering portfolio project, not a production-readiness certification. Validation was limited to the documented checks; end-to-end workload connectivity, disaster recovery, and a complete security assessment were not established.
+
+---
+
 ## 1. Project Overview
-This project documents the design, implementation, configuration and validation of an Azure environment intended to support production and development workloads.
-
-The work originated from two internal infrastructure and security requests. These requests were translated into technical implementation tasks and delivered through a sequence of Azure infrastructure labs.
-
-The implementation covered network infrastructure, network security, virtual machine deployment, Linux configuration, outbound connectivity, SQL Server deployment and secure credential retrieval using Azure Key Vault and managed identity.
+This project documents the design, implementation, configuration, troubleshooting, and validation of an Azure environment across five implementation milestones.
 
 **Project classification:** Azure Cloud Infrastructure Implementation
 **Project ID:** AZ-PRJ-001
@@ -212,12 +229,10 @@ This project provided practical experience in:
 
 - [Lab 01 - Initial Azure Network Infrastructure](02-Implementation/AZ-001-Network-Infrastructure.md)
 - [Lab 01.2 - Network Security Groups](02-Implementation/AZ-002-Network-Security-Groups.md)
-- [Lab 01.3 - Virtual Machine Deployment](02-Implementation/AZ-003-Virtual-Machine-Deployment.md)
+- [Lab 01.3 - Terraform-Based Virtual Machine Provisioning](02-Implementation/AZ-003-Terraform-Based-Virtual-Machine-Provisioning.md)
 - [Lab 01.4 - Cloud-init and Outbound Connectivity](02-Implementation/AZ-004-Cloud-Init-and-Outbound-Connectivity.md)
 - [Lab 01.5 - SQL Server and Key Vault Integration](02-Implementation/AZ-005-SQL-Server-and-Key-Vault-Integration.md)
 
-### 03 - Troubleshooting
-Troubleshooting records will document significant implementation failures, root causes, resolutions and lessons learned.
 
 ### Evidence
 Screenshots, deployment outputs, configuration evidence and relevant architecture diagrams will be maintained in the `images/` directory.
