@@ -4,8 +4,8 @@
 **Request Reference:** Email 002  
 **Request Owner:** Security Operations  
 **Subject:** Implement network access restrictions  
-**Status:** Request Details Recovered — Implementation Evidence Documented; Date and Acceptance Evidence Pending  
-**Related Milestone:** [Lab 01.2 / AZ-002 — Network Security Groups](../02-Implementation/AZ-002-Network-Security-Groups.md)
+**Status:** Request Details Recovered — Date and Implementation Evidence Pending  
+**Related Milestone:** Lab 01.2 / AZ-002 — Network Security Groups (pending creation)
 
 ---
 
@@ -23,7 +23,7 @@ The supplied screenshot identifies the sender as **Security Operations** and pre
 
 ## 3. Intended Implementation Scope
 
-This request is the source record for Lab 01.2. The implementation case documents the NSG resources, rules, subnet associations, portal evidence, and CLI rule-list output.
+This request is the source record for Lab 01.2. The planned implementation case will document the NSG resources, rules, subnet associations, deployment evidence, and controlled validation results.
 
 The request does not, by itself, prove that SQL traffic was tested successfully. The later implementation record must distinguish configured rules from verified network connectivity.
 
@@ -31,14 +31,16 @@ The request does not, by itself, prove that SQL traffic was tested successfully.
 
 | Recovered Requirement | Planned Implementation Evidence | Status |
 |---|---|---|
-| Separate production and development database NSGs | NSG resources and database-subnet associations | Documented |
-| TCP 1433 from the matching application subnet only | Rule priorities, source CIDRs, protocol, and destination port | Rule configuration documented; connection test pending |
-| Deny unsolicited inbound traffic | Explicit deny rule and effective-rule validation | Rule configuration documented; effective-flow test pending |
+| Separate production and development database NSGs | NSG resources and database-subnet associations | Pending implementation record |
+| TCP 1433 from the matching application subnet only | Rule priorities, source CIDRs, protocol, and destination port | Pending implementation record |
+| Deny unsolicited inbound traffic | Explicit deny rule and effective-rule validation | Pending implementation record |
 
 ## 5. Outstanding Evidence
 
 Add or link the following when available:
 
+- Terraform or Azure deployment evidence for both NSGs.
+- NSG rule and subnet-association evidence.
 - Authorised TCP 1433 test from each corresponding application subnet.
 - Unauthorised-source test demonstrating the denied path.
 - Formal acceptance evidence and relevant date information.
